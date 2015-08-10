@@ -17,7 +17,6 @@ import android.widget.Toast;
 public class FragmentA extends Fragment {
 
 
-
     public FragmentA() {
         // Required empty public constructor
     }
@@ -26,17 +25,10 @@ public class FragmentA extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        return inflater.inflate(R.layout.fragment_a, container, false);
 
-       View  mContainer = inflater.inflate(R.layout.fragment_a, container, false);
 
-        TextView textView=(TextView) mContainer.findViewById(R.id.frag_a_text);
-        textView.setText(getArguments().getString("var1"));
-
-        // Inflate the layout for this fragment
-        return mContainer;
     }
-
-
 
 
 }

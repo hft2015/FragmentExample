@@ -23,13 +23,9 @@ public class FragmentB extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View  mContainer = inflater.inflate(R.layout.fragment_b, container, false);
+        return inflater.inflate(R.layout.fragment_b, container, false);
 
-        TextView textView=(TextView) mContainer.findViewById(R.id.frag_b_text);
-        textView.setText(getArguments().getString("var1"));
 
-        // Inflate the layout for this fragment
-        return mContainer;
     }
 
 

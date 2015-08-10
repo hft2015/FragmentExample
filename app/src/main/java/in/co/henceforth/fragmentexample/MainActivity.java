@@ -26,47 +26,18 @@ public class MainActivity extends ActionBarActivity {
     public void ActivateFragmentA(View v) {
 
         Fragment fr = new FragmentA();
-
-        Bundle args = new Bundle();
-        args.putString("var1", "this is fragment A Value");
-        fr.setArguments(args);
-
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).replace(R.id.container, fr).commit();
-        //Toast.makeText(getApplicationContext(),"inside Fragment A",Toast.LENGTH_SHORT).show();
+
     }
 
     public void ActivateFragmentB(View v) {
+
         Fragment fr = new FragmentB();
-
-        Bundle args = new Bundle();
-        args.putString("var1", "this is fragment B Value");
-        fr.setArguments(args);
-
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction().setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE).replace(R.id.container, fr).commit();
-        //Toast.makeText(getApplicationContext(),"inside Fragment B",Toast.LENGTH_SHORT).show();
+
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }
